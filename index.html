@@ -1,11 +1,311 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <title>La mia pagina</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>8 mesi con te ✨</title>
+  <meta name="description" content="Un piccolo viaggio nello spazio, nel tempo e nei nostri ricordi." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Ciao, questa è la mia pagina web</h1>
-  <p>Sto usando GitHub Pages.</p>
+  <canvas id="starfield"></canvas>
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <header class="topbar">
+    <div class="logo">8 mesi ✦</div>
+    <nav>
+      <a href="#idea">L'idea</a>
+      <a href="#viaggio">Il viaggio</a>
+      <a href="#ricordi">I ricordi</a>
+      <a href="#finale">Finale</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero section">
+      <div class="hero-inner">
+        <p class="eyebrow">Per noi, tra spazio e tempo</p>
+        <h1>
+          Sono passati <span>8 mesi</span>.<br />
+          Ma forse, da qualche parte nell’universo,<br />
+          qualcuno li sta ancora vedendo nascere.
+        </h1>
+        <p class="hero-text">
+          Questa pagina è un piccolo viaggio: un alieno si avvicina alla Terra
+          per conoscere gli esseri umani... e, guardando con il suo binocolo,
+          vede noi.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#idea">Inizia il viaggio</a>
+          <a class="btn btn-secondary" href="#ricordi">Vai ai nostri momenti</a>
+        </div>
+      </div>
+      <div class="hero-orbit">
+        <div class="planet earth-hero"></div>
+        <div class="ship hero-ship">🛸</div>
+      </div>
+    </section>
+
+    <!-- IDEA -->
+    <section id="idea" class="section">
+      <div class="content-card large-card">
+        <p class="section-label">L’idea</p>
+        <h2>Guardare lontano nello spazio significa guardare indietro nel tempo</h2>
+        <p>
+          La luce non arriva istantaneamente: viaggia.  
+          Questo significa che, quando osserviamo oggetti lontanissimi nell’universo,
+          non li vediamo come sono <strong>adesso</strong>, ma come erano
+          <strong>quando la loro luce è partita</strong>.
+        </p>
+        <p>
+          In altre parole: più guardi lontano, più stai guardando il passato.
+        </p>
+        <p>
+          E allora ho immaginato questo: un alieno che si avvicina lentamente alla Terra.
+          Durante il viaggio, osserva il nostro pianeta e, attraverso il suo binocolo,
+          vede alcuni momenti di noi due.
+        </p>
+        <p class="soft-note">
+          Non è solo un sito. È un modo per dire che quello che abbiamo vissuto
+          è così bello che persino l’universo potrebbe conservarne la luce.
+        </p>
+      </div>
+    </section>
+
+    <!-- VIAGGIO -->
+    <section id="viaggio" class="section journey-section">
+      <div class="journey-header">
+        <p class="section-label">Il viaggio</p>
+        <h2>Un alieno si avvicina alla Terra e ci osserva</h2>
+        <p>
+          Scorri verso il basso: mentre leggi, il viaggio continua e la scena cambia.
+        </p>
+      </div>
+
+      <div class="journey-layout">
+        <div class="journey-visual sticky-card">
+          <div class="journey-scene">
+            <div class="space-line"></div>
+            <div id="alienShip" class="alien-ship">🛸</div>
+            <div class="earth-wrap">
+              <div class="planet earth"></div>
+              <div class="earth-label">Terra</div>
+            </div>
+          </div>
+
+          <div class="status-box">
+            <p class="status-label">Osservazione in corso</p>
+            <h3 id="journeyTitle">Partenza da molto lontano</h3>
+            <p id="journeyText">
+              L’alieno è ancora distante. La Terra è solo un piccolo punto azzurro.
+            </p>
+
+            <div class="progress-wrap">
+              <span>Prossimità alla Terra</span>
+              <div class="progress-bar">
+                <div id="progressFill" class="progress-fill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-steps">
+          <article class="step active"
+            data-progress="8"
+            data-title="Partenza da molto lontano"
+            data-text="L’alieno è ancora distante. La Terra è soltanto un piccolo punto di luce nel buio.">
+            <h3>01 · Molto lontano</h3>
+            <p>
+              È ancora lontanissimo. Non sa nulla degli esseri umani.
+              Sta solo seguendo un bagliore interessante nel vuoto.
+            </p>
+          </article>
+
+          <article class="step"
+            data-progress="22"
+            data-title="Una luce azzurra nel buio"
+            data-text="La Terra diventa più riconoscibile. L’alieno punta il suo binocolo verso il pianeta.">
+            <h3>02 · Il pianeta azzurro</h3>
+            <p>
+              Avvicinandosi, nota qualcosa di speciale: un pianeta vivo,
+              luminoso, fragile e bellissimo.
+            </p>
+          </article>
+
+          <article class="step"
+            data-progress="38"
+            data-title="Il giorno in cui ci siamo conosciuti"
+            data-text="Guardando nel passato della Terra, l’alieno osserva il momento in cui tutto è iniziato tra noi.">
+            <h3>03 · L’inizio</h3>
+            <p>
+              Nel suo binocolo compare un frammento di passato:
+              il momento in cui ci siamo conosciuti.
+              Forse lui non capisce tutto... ma capisce che lì è cominciato qualcosa.
+            </p>
+          </article>
+
+          <article class="step"
+            data-progress="54"
+            data-title="I primi momenti insieme"
+            data-text="Adesso l’alieno vede piccoli frammenti di noi: sorrisi, parole, tempo condiviso.">
+            <h3>04 · I piccoli momenti</h3>
+            <p>
+              Vede scene semplici ma importantissime:
+              noi che ci guardiamo, che parliamo, che costruiamo piano piano qualcosa di nostro.
+            </p>
+          </article>
+
+          <article class="step"
+            data-progress="72"
+            data-title="Ci osserva e si emoziona"
+            data-text="Più ci guarda, più l’alieno si accorge che certi sentimenti sono universali.">
+            <h3>05 · Si emoziona</h3>
+            <p>
+              Ormai non è più un osservatore freddo.
+              Anche lui, guardandoci, si emoziona.
+              Forse perché anche nello spazio si capisce quando qualcosa è vero.
+            </p>
+          </article>
+
+          <article class="step"
+            data-progress="88"
+            data-title="Sta vedendo noi, proprio ora"
+            data-text="Mentre questa pagina viene letta, l’alieno sta osservando anche questo momento.">
+            <h3>06 · Proprio adesso</h3>
+            <p>
+              E adesso arriva il dettaglio più bello:
+              scrivendo o leggendo queste righe, lui sta vedendo anche questo.
+              Sta osservando questo stesso istante.
+            </p>
+          </article>
+
+          <article class="step"
+            data-progress="100"
+            data-title="Otto mesi dopo"
+            data-text="Alla fine del viaggio, l’alieno capisce che certe storie meritano di essere ricordate dalle stelle.">
+            <h3>07 · Otto mesi dopo</h3>
+            <p>
+              Alla fine del suo viaggio, non ha scoperto solo gli uomini.
+              Ha scoperto noi.
+              E forse ha capito che alcune storie meritano di restare accese come stelle.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RICORDI -->
+    <section id="ricordi" class="section">
+      <div class="section-head">
+        <p class="section-label">I nostri ricordi</p>
+        <h2>I momenti che il suo binocolo riesce a vedere</h2>
+        <p>
+          Qui sotto ho messo una base a card.  
+          Dopo potremo sostituire i placeholder con foto vere o immagini generate con IA.
+        </p>
+      </div>
+
+      <div class="memory-grid">
+        <article class="memory-card">
+          <div class="memory-media placeholder">
+            <span>Momento 01</span>
+            <small>Qui metteremo una foto / immagine IA</small>
+          </div>
+          <div class="memory-content">
+            <h3>Il giorno in cui ci siamo conosciuti</h3>
+            <p>
+              Questo è il punto da cui tutto è partito.
+              Un momento piccolo, ma enorme.
+            </p>
+          </div>
+        </article>
+
+        <article class="memory-card">
+          <div class="memory-media placeholder">
+            <span>Momento 02</span>
+            <small>Qui metteremo una foto / immagine IA</small>
+          </div>
+          <div class="memory-content">
+            <h3>Uno dei nostri primi momenti belli</h3>
+            <p>
+              Una scena che racconta l’inizio della complicità,
+              quando tutto stava iniziando a diventare importante.
+            </p>
+          </div>
+        </article>
+
+        <article class="memory-card">
+          <div class="memory-media placeholder">
+            <span>Momento 03</span>
+            <small>Qui metteremo una foto / immagine IA</small>
+          </div>
+          <div class="memory-content">
+            <h3>Un ricordo che ci rappresenta</h3>
+            <p>
+              Un momento che dice qualcosa su di noi:
+              come siamo, come stiamo insieme, cosa siamo diventati.
+            </p>
+          </div>
+        </article>
+
+        <article class="memory-card">
+          <div class="memory-media placeholder">
+            <span>Momento 04</span>
+            <small>Qui metteremo una foto / immagine IA</small>
+          </div>
+          <div class="memory-content">
+            <h3>Il presente</h3>
+            <p>
+              L’alieno guarda e vede anche questo:
+              noi, oggi, dopo 8 mesi.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ORA -->
+    <section class="section">
+      <div class="content-card center-card live-card">
+        <p class="section-label">Adesso</p>
+        <h2>Mentre leggi questa frase, lui ci sta guardando</h2>
+        <p id="liveMessage">
+          In questo esatto momento, da qualche punto remoto del cosmo,
+          l’alieno osserva la Terra e vede noi due come un piccolo frammento di luce.
+        </p>
+        <div class="live-pill">
+          <span class="live-dot"></span>
+          osservazione attiva
+        </div>
+      </div>
+    </section>
+
+    <!-- FINALE -->
+    <section id="finale" class="section">
+      <div class="content-card large-card ending-card">
+        <p class="section-label">Finale</p>
+        <h2>Se persino l’universo può conservare la luce di un momento,<br>allora io voglio conservare noi</h2>
+        <p>
+          Questi 8 mesi non sono soltanto tempo passato.
+          Sono momenti, emozioni, ricordi, crescita, presenza.
+        </p>
+        <p>
+          E l’idea che mi piace è questa:
+          che da qualche parte, nel cielo, la luce di quello che abbiamo vissuto
+          stia ancora viaggiando.
+        </p>
+        <p class="final-dedication">
+          Buon ottavo mese, amore. ✨
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
