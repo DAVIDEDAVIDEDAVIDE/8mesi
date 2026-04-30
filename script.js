@@ -1,6 +1,6 @@
-// -----------------------------
-// STARFIELD BACKGROUND
-// -----------------------------
+// ----------------------------
+// STARFIELD
+// ----------------------------
 const canvas = document.getElementById("starfield");
 const ctx = canvas.getContext("2d");
 
@@ -14,14 +14,14 @@ function resizeCanvas() {
 }
 
 function createStars() {
-  const count = Math.floor((canvas.width * canvas.height) / 9000);
+  const count = Math.floor((canvas.width * canvas.height) / 9500);
   stars = [];
 
   for (let i = 0; i < count; i++) {
     stars.push({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      r: Math.random() * 1.7 + 0.2,
+      r: Math.random() * 1.6 + 0.2,
       alpha: Math.random() * 0.8 + 0.2,
       speed: Math.random() * 0.015 + 0.002
     });
@@ -29,12 +29,12 @@ function createStars() {
 }
 
 function maybeCreateShootingStar() {
-  if (Math.random() < 0.006) {
+  if (Math.random() < 0.005) {
     shootingStars.push({
-      x: Math.random() * canvas.width * 0.8,
-      y: Math.random() * canvas.height * 0.4,
-      len: Math.random() * 120 + 80,
-      speed: Math.random() * 14 + 8,
+      x: Math.random() * canvas.width * 0.7,
+      y: Math.random() * canvas.height * 0.35,
+      len: Math.random() * 140 + 60,
+      speed: Math.random() * 13 + 8,
       life: 0,
       maxLife: 28
     });
@@ -66,7 +66,7 @@ function drawStars() {
     const y2 = s.y + s.len * 0.35 * progress;
 
     ctx.beginPath();
-    ctx.strokeStyle = `rgba(180,220,255,${1 - progress})`;
+    ctx.strokeStyle = `rgba(181, 221, 255, ${1 - progress})`;
     ctx.lineWidth = 2;
     ctx.moveTo(s.x, s.y);
     ctx.lineTo(x2, y2);
@@ -84,61 +84,10 @@ window.addEventListener("resize", resizeCanvas);
 resizeCanvas();
 drawStars();
 
-// -----------------------------
-// JOURNEY STEP INTERACTION
-// -----------------------------
-const steps = document.querySelectorAll(".step");
-const alienShip = document.getElementById("alienShip");
-const journeyTitle = document.getElementById("journeyTitle");
-const journeyText = document.getElementById("journeyText");
-const progressFill = document.getElementById("progressFill");
-
-function setJourneyState(step) {
-  steps.forEach((s) => s.classList.remove("active"));
-  step.classList.add("active");
-
-  const progress = Number(step.dataset.progress || 0);
-  const title = step.dataset.title || "";
-  const text = step.dataset.text || "";
-
-  journeyTitle.textContent = title;
-  journeyText.textContent = text;
-  progressFill.style.width = `${progress}%`;
-
-  const maxDistance = 255; // distanza massima della navicella
-  const x = (progress / 100) * maxDistance;
-  const y = Math.sin(progress / 12) * 10;
-
-  alienShip.style.transform = `translate(${x}px, ${y}px)`;
-}
-
-const stepObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        setJourneyState(entry.target);
-      }
-    });
-  },
-  {
-    threshold: 0.55
-  }
-);
-
-steps.forEach((step) => stepObserver.observe(step));
-
-if (steps.length > 0) {
-  setJourneyState(steps[0]);
-}
-
-// -----------------------------
+// ----------------------------
 // REVEAL ON SCROLL
-// -----------------------------
-const revealTargets = document.querySelectorAll(
-  ".content-card, .memory-card, .journey-header, .step, .section-head"
-);
-
-revealTargets.forEach((el) => el.classList.add("reveal"));
+// ----------------------------
+const revealItems = document.querySelectorAll(".reveal");
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
@@ -149,34 +98,18 @@ const revealObserver = new IntersectionObserver(
       }
     });
   },
-  {
-    threshold: 0.12
-  }
+  { threshold: 0.12 }
 );
 
-revealTargets.forEach((el) => revealObserver.observe(el));
+revealItems.forEach((item) => revealObserver.observe(item));
 
-// -----------------------------
-// LIVE MESSAGE ROTATION
-// -----------------------------
-const liveMessage = document.getElementById("liveMessage");
+// ----------------------------
+// PARALLAX LEGGERO SULL'IMMAGINE
+// ----------------------------
+const storyImage = document.querySelector(".story-image");
 
-const liveMessages = [
-  "In questo esatto momento, da qualche punto remoto del cosmo, l’alieno osserva la Terra e vede noi due come un piccolo frammento di luce.",
-  "Forse per lui siamo solo due persone lontane. Ma abbastanza luminose da essere notate persino nello spazio.",
-  "Mentre questa pagina esiste, anche questo istante entra a far parte della nostra luce nel tempo.",
-  "Lui ci guarda da lontano. Io invece ti guardo da qui. E ti sceglierei comunque."
-];
-
-let currentMessage = 0;
-
-setInterval(() => {
-  if (!liveMessage) return;
-  currentMessage = (currentMessage + 1) % liveMessages.length;
-  liveMessage.style.opacity = "0";
-
-  setTimeout(() => {
-    liveMessage.textContent = liveMessages[currentMessage];
-    liveMessage.style.opacity = "1";
-  }, 250);
-}, 4200);
+window.addEventListener("scroll", () => {
+  if (!storyImage) return;
+  const y = window.scrollY * 0.06;
+  storyImage.style.transform = `scale(1.03) translateY(${y}px)`;
+});
