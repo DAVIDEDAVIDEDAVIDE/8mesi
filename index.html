@@ -3,17 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>8 mesi con te ✨</title>
-  <meta name="description" content="Un piccolo viaggio nello spazio e nel tempo, per noi." />
+  <meta name="description" content="Un viaggio nello spazio, nel tempo e nei nostri ricordi." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <canvas id="starfield"></canvas>
-  <div class="bg-glow glow-1"></div>
-  <div class="bg-glow glow-2"></div>
+  <div class="bg-glow glow-blue"></div>
+  <div class="bg-glow glow-gold"></div>
 
   <main>
     <!-- HERO -->
@@ -21,49 +28,49 @@
       <div class="hero-badge">8 mesi ✦</div>
 
       <h1>
-        Otto mesi fa è partita una luce.<br>
-        E qualcuno, lassù,<br>
-        la sta vedendo adesso.
+        Otto mesi fa è iniziato tutto.<br>
+        Ma da qualche parte nello spazio,<br>
+        qualcuno ci vedeva già.
       </h1>
 
       <p class="hero-text">
         Un alieno si avvicina alla Terra. Guardando da lontano non vede il presente:
-        vede la luce che gli sta arrivando. E dentro quella luce ci siamo noi.
+        vede la luce che gli arriva. E dentro quella luce ha visto noi, momento dopo momento.
       </p>
 
-      <a href="#viaggio" class="btn-primary">Inizia il viaggio</a>
+      <div class="hero-actions">
+        <a href="#viaggio" class="btn-primary">Inizia il viaggio</a>
+      </div>
     </section>
 
-    <!-- IMMAGINE PRINCIPALE -->
+    <!-- ALIENO -->
     <section id="viaggio" class="section reveal">
-      <div class="story-card">
-        <div class="story-image-wrap">
+      <div class="alien-card">
+        <div class="alien-image-wrap">
           <img
-            src="assets/alieno-binocolo.png"
+            src="assets/foto0.png"
             alt="Alieno che osserva la Terra con un binocolo"
-            class="story-image"
+            class="alien-image"
             loading="eager"
           />
         </div>
 
-        <div class="story-overlay">
-          <div class="glass-card">
-            <span class="mini-label">Osservazione</span>
-            <h2>Lui ci guarda da molto lontano</h2>
-            <p>
-              La luce ha bisogno di tempo per viaggiare.  
-              Per questo, più sei lontano dalla Terra, più la vedi nel passato.
-            </p>
-          </div>
+        <div class="alien-text-panel">
+          <span class="mini-label">Osservazione cosmica</span>
+          <h2>Lui guarda la Terra. Ma non vede adesso.</h2>
+          <p>
+            La luce viaggia a una velocità finita: circa 299.792 km al secondo.
+            Quindi, più l’alieno è lontano dalla Terra, più vede il nostro passato.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- SPIEGAZIONE BREVE / DISTANZE -->
+    <!-- SPIEGAZIONE -->
     <section class="section compact-section">
       <div class="section-intro reveal">
-        <span class="mini-label">Come funziona</span>
-        <h2>Non vede il presente. Vede la luce che gli arriva.</h2>
+        <span class="mini-label">Il senso del viaggio</span>
+        <h2>Ogni distanza è un ricordo che arriva.</h2>
       </div>
 
       <div class="facts-grid">
@@ -71,8 +78,7 @@
           <span class="fact-tag">1 secondo-luce</span>
           <h3>299.792 km</h3>
           <p>
-            Se fosse a questa distanza, vedrebbe la Terra com’era
-            <strong>1 secondo fa</strong>.
+            Da qui vedrebbe la Terra com’era <strong>1 secondo fa</strong>.
           </p>
         </article>
 
@@ -80,8 +86,7 @@
           <span class="fact-tag">1 giorno-luce</span>
           <h3>25,9 miliardi di km</h3>
           <p>
-            Da qui la Terra gli apparirebbe
-            <strong>1 giorno nel passato</strong>.
+            Da qui gli arriverebbe la luce partita dalla Terra <strong>1 giorno prima</strong>.
           </p>
         </article>
 
@@ -89,92 +94,68 @@
           <span class="fact-tag">8 mesi-luce</span>
           <h3>circa 6,3 × 10¹² km</h3>
           <p>
-            Se oggi si trova qui, sta vedendo la Terra di
-            <strong>8 mesi fa</strong>.  
-            Quindi sta vedendo proprio l’inizio di noi.
+            Se si trovasse a questa distanza, oggi vedrebbe la Terra di
+            <strong>8 mesi fa</strong>: il tempo in cui tutto è diventato nostro.
           </p>
         </article>
 
         <article class="fact-card reveal">
-          <span class="fact-tag">Se si avvicina molto veloce</span>
+          <span class="fact-tag">Viaggio verso di noi</span>
           <h3>Effetto relativistico</h3>
           <p>
-            Muovendosi verso la Terra, i momenti gli arrivano più compressi:
+            Se si avvicina molto velocemente, i momenti gli arrivano più compressi:
             la nostra storia gli scorre davanti <strong>più in fretta</strong>.
           </p>
         </article>
       </div>
     </section>
 
-    <!-- BLOCCO NARRATIVO BREVE -->
+    <!-- APERTURA GALLERIA -->
     <section class="section reveal">
-      <div class="narrative-card">
-        <div class="narrative-line"></div>
+      <div class="portal-card">
+        <div class="portal-orbit"></div>
+        <span class="mini-label">Archivio di luce</span>
+        <h2>Cosa ha visto l’alieno di noi?</h2>
+        <p>
+          Ha visto quello che forse noi vivevamo senza rendercene conto.
+          Piccoli momenti, ma abbastanza luminosi da arrivare fin lassù.
+        </p>
 
-        <div class="narrative-content">
-          <span class="mini-label">Il viaggio</span>
-          <h2>All’inizio vede solo un pianeta lontano.</h2>
-          <p>
-            Poi capisce che su quel pianeta ci sono due persone.
-            E continuando ad avvicinarsi vede sempre più momenti:
-            l’inizio, i sorrisi, i ricordi, il presente.
-          </p>
-
-          <div class="quote-box">
-            <p>
-              Mentre leggi questa pagina, lui sta ancora guardando.
-              E in qualche punto del cosmo, sta vedendo anche noi.
-            </p>
-          </div>
-        </div>
+        <button class="btn-big" id="openGallery">
+          Cosa ha visto l’alieno di noi
+        </button>
       </div>
     </section>
 
-    <!-- MOMENTI -->
-    <section class="section">
+    <!-- ANTEPRIMA MOMENTI SU PAGINA -->
+    <section class="section moments-preview-section">
       <div class="section-intro reveal">
-        <span class="mini-label">I nostri momenti</span>
-        <h2>Quello che il suo binocolo riesce a vedere</h2>
+        <span class="mini-label">Frammenti</span>
+        <h2>Alcuni momenti sono rimasti accesi.</h2>
       </div>
 
-      <div class="memory-track reveal">
-        <article class="memory-card">
-          <div class="memory-photo" style="background-image: url('assets/momento1.jpg');">
-            <div class="memory-overlay"></div>
-          </div>
-          <div class="memory-text">
-            <span>Momento 01</span>
-            <h3>L’inizio</h3>
+      <div class="preview-stack reveal">
+        <article class="preview-card">
+          <img src="assets/3_settembre.png" alt="Finalmente insieme">
+          <div>
+            <span>3 settembre 2025</span>
+            <h3>Finalmente insieme</h3>
           </div>
         </article>
 
-        <article class="memory-card">
-          <div class="memory-photo" style="background-image: url('assets/momento2.jpg');">
-            <div class="memory-overlay"></div>
-          </div>
-          <div class="memory-text">
-            <span>Momento 02</span>
-            <h3>I primi momenti belli</h3>
+        <article class="preview-card">
+          <img src="assets/18_aprile.png" alt="Quel giorno sul lago">
+          <div>
+            <span>18 aprile 2026</span>
+            <h3>Quel giorno sul lago</h3>
           </div>
         </article>
 
-        <article class="memory-card">
-          <div class="memory-photo" style="background-image: url('assets/momento3.jpg');">
-            <div class="memory-overlay"></div>
-          </div>
-          <div class="memory-text">
-            <span>Momento 03</span>
-            <h3>Un ricordo nostro</h3>
-          </div>
-        </article>
-
-        <article class="memory-card">
-          <div class="memory-photo" style="background-image: url('assets/momento4.jpg');">
-            <div class="memory-overlay"></div>
-          </div>
-          <div class="memory-text">
-            <span>Momento 04</span>
-            <h3>Noi, adesso</h3>
+        <article class="preview-card">
+          <img src="assets/1_maggio.png" alt="La crostata alla Nutella">
+          <div>
+            <span>1 maggio 2026</span>
+            <h3>La crostata alla Nutella</h3>
           </div>
         </article>
       </div>
@@ -189,12 +170,139 @@
           allora voglio che anche noi restiamo così:
           luminosi.
         </h2>
-        <p>
-          Buon ottavo mese, amore. ✨
-        </p>
+        <p>Buon ottavo mese, amore. ✨</p>
       </div>
     </section>
   </main>
+
+  <!-- GALLERIA FULLSCREEN -->
+  <div class="gallery-modal" id="galleryModal" aria-hidden="true">
+    <div class="gallery-backdrop" id="galleryBackdrop"></div>
+
+    <div class="gallery-shell">
+      <div class="gallery-topbar">
+        <div>
+          <span class="mini-label">Memorie osservate</span>
+          <h2>Cosa ha visto l’alieno</h2>
+        </div>
+
+        <button class="close-gallery" id="closeGallery" aria-label="Chiudi galleria">
+          ✕
+        </button>
+      </div>
+
+      <div class="gallery-progress">
+        <div class="gallery-progress-fill" id="galleryProgress"></div>
+      </div>
+
+      <div class="gallery-slider" id="gallerySlider">
+        <article class="gallery-slide">
+          <div class="slide-image-wrap">
+            <img src="assets/5_luglio.png" alt="5 luglio 2025">
+          </div>
+          <div class="slide-caption">
+            <span>5 luglio 2025</span>
+            <h3>L’inizio, ancora prima di tutto</h3>
+            <p>
+              In realtà tutto era partito prima di quando ci siamo fidanzati.
+              L’alieno ha visto anche questo: quando qualcosa stava già iniziando,
+              anche se ancora non lo sapevamo davvero.
+            </p>
+          </div>
+        </article>
+
+        <article class="gallery-slide">
+          <div class="slide-image-wrap">
+            <img src="assets/17_agosto.png" alt="17 agosto 2025">
+          </div>
+          <div class="slide-caption">
+            <span>17 agosto 2025</span>
+            <h3>Quel giro in moto</h3>
+            <p>
+              Ha visto anche quando siamo andati a fare un giro sulla moto.
+              Io ti trovavo già molto carina e dentro di me speravo già un po’
+              che potesse nascere qualcosa.
+            </p>
+          </div>
+        </article>
+
+        <article class="gallery-slide">
+          <div class="slide-image-wrap">
+            <img src="assets/3_settembre.png" alt="3 settembre 2025">
+          </div>
+          <div class="slide-caption">
+            <span>3 settembre 2025</span>
+            <h3>Finalmente insieme</h3>
+            <p>
+              Ha visto anche il momento in cui è cominciato tutto davvero
+              e in cui, grazie ad un nero, è diventato ufficiale.
+            </p>
+          </div>
+        </article>
+
+        <article class="gallery-slide">
+          <div class="slide-image-wrap">
+            <img src="assets/11_dicembre.png" alt="11 dicembre 2025">
+          </div>
+          <div class="slide-caption">
+            <span>11 dicembre 2025</span>
+            <h3>La sorpresona del tuo compleanno</h3>
+            <p>
+              Ha visto anche quel giorno speciale:
+              una sorpresa che brillava fortissimo anche vista da lontano.
+            </p>
+          </div>
+        </article>
+
+        <article class="gallery-slide">
+          <div class="slide-image-wrap">
+            <img src="assets/3_marzo.png" alt="3 marzo 2026">
+          </div>
+          <div class="slide-caption">
+            <span>3 marzo 2026</span>
+            <h3>I nostri 6 mesi</h3>
+            <p>
+              Ti ha vista pensare che mi fossi scordato dei nostri 6 mesi,
+              mentre lui già sorrideva perché sapeva la sorpresa che stava arrivando.
+            </p>
+          </div>
+        </article>
+
+        <article class="gallery-slide">
+          <div class="slide-image-wrap">
+            <img src="assets/18_aprile.png" alt="18 aprile 2026">
+          </div>
+          <div class="slide-caption">
+            <span>18 aprile 2026</span>
+            <h3>Quel giorno sul lago</h3>
+            <p>
+              Si è quasi commosso vedendo quanto eravamo belli insieme sul lago.
+            </p>
+          </div>
+        </article>
+
+        <article class="gallery-slide">
+          <div class="slide-image-wrap">
+            <img src="assets/1_maggio.png" alt="1 maggio 2026">
+          </div>
+          <div class="slide-caption">
+            <span>1 maggio 2026</span>
+            <h3>La crostata alla Nutella</h3>
+            <p>
+              E ha visto anche la crostata alla Nutella che mi hai regalato:
+              una cosa semplice, dolce, e troppo nostra.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="gallery-controls">
+        <button id="prevSlide" class="gallery-btn">←</button>
+        <div class="slide-counter" id="slideCounter">1 / 7</div>
+        <button id="nextSlide" class="gallery-btn">→</button>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
